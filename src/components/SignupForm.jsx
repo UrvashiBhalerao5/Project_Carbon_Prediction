@@ -70,6 +70,54 @@ function SignupForm() {
             Get Started
           </button>
         </form>
+
+        <div className="mt-4 text-center text-gray-600">Or</div>
+
+        {/* Social Login Buttons */}
+        <div className="flex flex-col space-y-2 mt-4">
+          <button
+            type="button"
+            className="w-full flex items-center justify-center bg-gray-100 text-gray-700 py-2 rounded-lg hover:bg-gray-200 transition"
+          >
+            <img
+              src="https://img.icons8.com/color/48/000000/google-logo.png"
+              alt="Google"
+              className="w-6 h-6 mr-2"
+            />
+            Sign Up with Google
+          </button>
+
+          <button
+            type="button"
+            className="w-full flex items-center justify-center bg-gray-100 text-gray-700 py-2 rounded-lg hover:bg-gray-200 transition"
+          >
+            <img
+              src="https://img.icons8.com/color/48/000000/facebook-new.png"
+              alt="Facebook"
+              className="w-6 h-6 mr-2"
+            />
+            Sign Up with Facebook
+          </button>
+
+          <button
+            type="button"
+            className="w-full flex items-center justify-center bg-gray-100 text-gray-700 py-2 rounded-lg hover:bg-gray-200 transition"
+          >
+            <img
+              src="https://img.icons8.com/color/48/000000/mac-os.png"
+              alt="Apple"
+              className="w-6 h-6 mr-2"
+            />
+            Sign Up with Apple
+          </button>
+        </div>
+
+        <p className="mt-6 text-center text-gray-600">
+          Already have an account?{" "}
+          <a href="/login" className="text-indigo-600 font-bold">
+            LOG IN HERE
+          </a>
+        </p>
       </div>
     </div>
   );

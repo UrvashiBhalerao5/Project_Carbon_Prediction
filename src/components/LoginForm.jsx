@@ -20,7 +20,7 @@ function LoginForm() {
 
     try {
       // Send login request to server with email and password
-      const response = await axios.post('http://localhost:3000/api', {
+      const response = await axios.post('http://localhost:5000/api/auth/login', {
         email,
         password
       });
@@ -31,7 +31,7 @@ function LoginForm() {
         localStorage.setItem('authToken', response.data.token);
 
         // Redirect to the dashboard after successful login
-        navigate('/');
+        navigate('/Portfolio');
       } else {
         setErrorMessage('Invalid credentials, please try again.');
       }

@@ -12,7 +12,7 @@ const LandingPage = () => {
             alt="Logo"
             className="w-8 h-8"
           />
-          <span className="text-lg font-semibold">Groww</span>
+          <span className="text-lg font-semibold">EnergySavr</span>
         </div>
 
         {/* Search Bar */}

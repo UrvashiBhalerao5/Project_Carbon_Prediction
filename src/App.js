@@ -5,9 +5,10 @@ import SignupForm from './components/SignupForm'; // Import SignupForm component
 import LoginForm from './components/LoginForm'; // Import LoginForm component
 import Sidebar from './components/Sidebar'; // Import Sidebar component
 import Topbar from './components/topbar'; // Import Topbar component
-import Portfolio from './components/Portfolio'; // Import Portfolio component
+import Portfolio from './components/Portfolio'; // Import Portfolio component 
 import Purchases from './components/Purchases'; // Import Purchases component
 import LandingPage from './components/LandingPage'; // Import LandingPage component
+import Cart from './components/cart'; // Import cart component
 
 // Layout Component: For routes that include Sidebar and Topbar
 const Layout = ({ children }) => {
@@ -50,6 +51,7 @@ const App = () => {
               </Layout>
             }
           />
+           <Route path="/cart" element={<Layout><Cart /></Layout>} />
         </Routes>
       </div>
     </Router>

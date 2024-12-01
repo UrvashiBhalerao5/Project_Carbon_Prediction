@@ -1,4 +1,4 @@
-/* src/index.css */
+/* Tailwind and Base Styles */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -19,7 +19,6 @@
   }
 }
 
-/* Header Styles */
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -35,69 +34,6 @@
   color: #61dafb;
 }
 
-/* Button Styles */
-.button {
-  display: inline-block;
-  padding: 10px 20px;
-  font-size: 16px;
-  font-weight: 600;
-  color: white;
-  background-color: #007bff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s, transform 0.2s;
-}
-
-.button:hover {
-  background-color: #0056b3;
-  transform: translateY(-2px);
-}
-
-.button:active {
-  background-color: #003d80;
-  transform: translateY(1px);
-}
-
-/* Input Fields */
-.input {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  font-size: 16px;
-  margin-bottom: 15px;
-  transition: border-color 0.3s, box-shadow 0.2s;
-}
-
-.input:focus {
-  border-color: #007bff;
-  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
-  outline: none;
-}
-
-/* Form Container */
-.form-container {
-  max-width: 400px;
-  margin: 0 auto;
-  padding: 20px;
-  background-color: #ffffff;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-/* Link Styles */
-.link {
-  color: #007bff;
-  text-decoration: none;
-  font-weight: 600;
-}
-
-.link:hover {
-  text-decoration: underline;
-}
-
-/* Animation */
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -128,4 +64,86 @@
 
 .text-gray {
   color: #6c757d;
+}
+
+/* Layout Fixes */
+html, body {
+  height: 100%;
+  margin: 0;
+  scroll-behavior: smooth;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Sidebar Styling */
+.sidebar {
+  position: fixed; /* Keep the sidebar fixed to the left */
+  top: 0;
+  left: 0;
+  width: 250px; /* Set the width of the sidebar */
+  height: 100%; /* Sidebar takes full height */
+  background-color: #333; /* Sidebar background color */
+  color: white; /* Text color inside sidebar */
+  padding: 20px;
+  box-sizing: border-box;
+  z-index: 10; /* Make sure the sidebar stays on top */
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar li {
+  margin-bottom: 20px;
+}
+
+.sidebar a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.sidebar a:hover {
+  color: #007bff;
+}
+
+/* Main Content Area */
+.main-container {
+  display: flex;
+  flex-direction: column;
+  margin-left: 250px; /* Space to the left of the sidebar */
+  padding: 20px;
+  flex: 1;
+}
+
+/* Content Area Scroll */
+main {
+  overflow-y: auto;
+  flex: 1;
+  padding-bottom: 50px; /* Space to ensure scrolling works properly */
+}
+
+/* Scrollable Sections */
+section {
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+#portfolio {
+  padding-bottom: 50px;
+}
+
+#purchases {
+  padding-top: 50px;
+}
+
+/* Ensure smooth scrolling on the body */
+body {
+  overflow-y: scroll;
+}
+
+section {
+  scroll-snap-align: start;
 }
